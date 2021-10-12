@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-10-11 16:18:41
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-12 15:19:31
+ * @LastEditTime: 2021-10-12 16:42:56
 -->
 <template>
   <div class="home">
@@ -64,6 +64,10 @@
       <book-list :bookList="items.books"></book-list>
     </div>
     <!-- 分类 结束 -->
+
+    <!-- 播放器 开始 -->
+    <music-player></music-player>
+    <!-- 播放器 结束 -->
   </div>
 </template>
 
@@ -72,8 +76,9 @@ import Swiper from "@/components/swiper";
 import listHeader from "@/components/listHeader";
 import BookGrid from "@/components/bookGrid";
 import BookList from "@/components/bookList";
+import MusicPlayer from "@/components/musicPlayer";
 export default {
-  components: { Swiper, listHeader, BookGrid, BookList },
+  components: { Swiper, listHeader, BookGrid, BookList, MusicPlayer },
   data() {
     return {
       keyword: "", // 搜索关键词
