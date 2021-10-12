@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-10-11 16:18:41
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-12 15:01:55
+ * @LastEditTime: 2021-10-12 15:19:31
 -->
 <template>
   <div class="home">
@@ -23,23 +23,31 @@
         icon-prefix="iconfont"
         icon="iconfont icon-icon-test"
         icon-color="#ffc107"
+        link-type="navigateTo"
+        url="/pages/readList/main"
         text="看榜单"
       />
       <van-grid-item
         icon-prefix="iconfont"
         icon="iconfont icon-startRead"
         icon-color="#0056b3"
+        link-type="navigateTo"
+        url="/pages/listenNovel/main"
         text="听小说"
       />
       <van-grid-item
         icon-prefix="iconfont"
         icon="iconfont icon-icon09"
+        link-type="navigateTo"
+        url="/pages/listenMusic/main"
         text="听音乐"
       />
       <van-grid-item
         icon-prefix="iconfont"
         icon="iconfont icon-zhishi"
         icon-color="#28a745"
+        link-type="navigateTo"
+        url="/pages/listenKnowledge/main"
         text="听知识"
       />
     </van-grid>

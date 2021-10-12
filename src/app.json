@@ -3,7 +3,11 @@
     "pages/index/main",
     "pages/sort/main",
     "pages/collection/main",
-    "pages/mine/main"
+    "pages/mine/main",
+    "pages/readList/main",
+    "pages/listenNovel/main",
+    "pages/listenMusic/main",
+    "pages/listenKnowledge/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-10-12 10:14:46
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-12 10:14:47
+ * @LastEditTime: 2021-10-12 15:10:55
  */
 import Vue from 'vue'
 import App from './mine'
