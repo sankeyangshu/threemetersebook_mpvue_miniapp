@@ -42,5 +42,12 @@
     }],
 
     "position": "bottom"
+  },
+  "usingComponents": {
+    "van-search": "/static/vant/search/index",
+    "van-image": "/static/vant/image/index",
+    "van-grid": "/static/vant/grid/index",
+    "van-grid-item": "/static/vant/grid-item/index",
+    "van-icon": "/static/vant/icon/index"
   }
 }
