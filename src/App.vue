@@ -1,9 +1,9 @@
 <!--
- * @Description:
+ * @Description: 全局根组件
  * @Author: 王振
  * @Date: 2021-10-11 16:18:41
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-11 16:30:52
+ * @LastEditTime: 2021-10-12 09:07:49
 -->
 <script>
 export default {
@@ -38,20 +38,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-}
-/* this rule will be remove */
-* {
-  transition: width 2s;
-  -moz-transition: width 2s;
-  -webkit-transition: width 2s;
-  -o-transition: width 2s;
-}
 </style>
