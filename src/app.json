@@ -1,44 +1,46 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/logs/main",
-    "pages/counter/main"
+    "pages/sort/main",
+    "pages/collection/main",
+    "pages/mine/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "三米阅读",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#999",
-    "backgroundColor": "#fafafa",
-    "selectedColor": "#333",
+    "backgroundColor": "#f4f7fc",
+    "selectedColor": "#dc4d2f",
     "borderStyle": "white",
 
     "list": [{
       "text": "首页",
       "pagePath": "pages/index/main",
-      "iconPath": "static/tabs/home.png",
-      "selectedIconPath": "static/tabs/home-active.png"
+      "iconPath": "static/tabbar/index.png",
+      "selectedIconPath": "static/tabbar/index-active.png"
     }, {
-      "text": "订单",
-      "pagePath": "pages/logs/main",
-      "iconPath": "static/tabs/orders.png",
-      "selectedIconPath": "static/tabs/orders-active.png"
+      "text": "分类",
+      "pagePath": "pages/sort/main",
+      "iconPath": "static/tabbar/sort.png",
+      "selectedIconPath": "static/tabbar/sort-active.png"
+    },
+    {
+      "text": "收藏",
+      "pagePath": "pages/collection/main",
+      "iconPath": "static/tabbar/collection.png",
+      "selectedIconPath": "static/tabbar/collection-active.png"
+    },
+    {
+      "text": "我的",
+      "pagePath": "pages/mine/main",
+      "iconPath": "static/tabbar/mine.png",
+      "selectedIconPath": "static/tabbar/mine-active.png"
     }],
 
-    "items": [{
-      "name": "首页",
-      "pagePath": "pages/index/main",
-      "icon": "static/tabs/home.png",
-      "activeIcon": "static/tabs/home-active.png"
-    }, {
-      "name": "订单",
-      "pagePath": "pages/logs/main",
-      "icon": "static/tabs/orders.png",
-      "activeIcon": "static/tabs/orders-active.png"
-    }],
     "position": "bottom"
   }
 }
