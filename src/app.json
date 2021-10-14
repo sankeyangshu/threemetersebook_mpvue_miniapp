@@ -7,7 +7,10 @@
     "pages/readList/main",
     "pages/listenNovel/main",
     "pages/listenMusic/main",
-    "pages/listenKnowledge/main"
+    "pages/listenKnowledge/main",
+    "pages/musicDetail/main",
+    "pages/bookDetail/main",
+    "pages/reading/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -52,6 +55,10 @@
     "van-image": "/static/vant/image/index",
     "van-grid": "/static/vant/grid/index",
     "van-grid-item": "/static/vant/grid-item/index",
-    "van-icon": "/static/vant/icon/index"
+    "van-icon": "/static/vant/icon/index",
+    "van-popup": "/static/vant/popup/index",
+    "van-button": "/static/vant/button/index",
+    "van-tab": "/static/vant/tab/index",
+    "van-tabs": "/static/vant/tabs/index"
   }
 }

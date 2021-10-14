@@ -3,12 +3,12 @@
  * @Author: 王振
  * @Date: 2021-10-12 14:24:24
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-12 14:38:36
+ * @LastEditTime: 2021-10-13 14:09:08
 -->
 <template>
   <div class="book__grid">
     <block v-for="(item, index) in Rebooks" :key="index">
-      <div class="book__grid__wrap">
+      <div class="book__grid__wrap" @click="OnClickToBookDetail(item.id)">
         <image :src="item.url" class="wrap__img" />
         <text class="wrap__title">{{ item.title }}</text>
         <van-icon
@@ -35,7 +35,14 @@ export default {
       msg: "",
     };
   },
-  methods: {},
+  methods: {
+    // 查看图书详情
+    OnClickToBookDetail(id) {
+      if (id === 1) {
+        this.$router.push("/pages/bookDetail/main");
+      }
+    },
+  },
 };
 </script>
 

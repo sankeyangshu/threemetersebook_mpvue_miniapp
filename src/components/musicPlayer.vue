@@ -3,10 +3,10 @@
  * @Author: 王振
  * @Date: 2021-10-12 15:41:19
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-12 16:16:52
+ * @LastEditTime: 2021-10-13 09:47:11
 -->
 <template>
-  <div class="player">
+  <div class="player" @click="OnClickOpenDetail">
     <!-- 进度条 开始 -->
     <div class="player__slider">
       <!-- 总时长 -->
@@ -60,7 +60,12 @@ export default {
       msg: "",
     };
   },
-  methods: {},
+  methods: {
+    // 跳转到音乐详情页
+    OnClickOpenDetail() {
+      this.$router.push("/pages/musicDetail/main");
+    },
+  },
 };
 </script>
 
