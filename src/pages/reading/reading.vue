@@ -3,28 +3,32 @@
  * @Author: 王振
  * @Date: 2021-10-13 14:57:26
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-13 17:17:06
+ * @LastEditTime: 2021-10-14 16:11:39
 -->
 <template>
   <div class="reading">
     <!-- 设置头部 开始 -->
-    <!-- <div class="reading__title">
+    <div class="reading__title cal">
       <text>{{ chapterCatalog[0].title }}</text>
-    </div> -->
+    </div>
     <!-- 设置头部 结束 -->
 
     <!-- 文本部分 开始 -->
-    <swiper :style="{ height: calHeight + 'rpx' }" class="reading__content">
-      <swiper-item>
+    <swiper
+      :style="{ height: calHeight + 'rpx' }"
+      class="reading__content"
+      @click="OnClickSetStatus"
+    >
+      <swiper-item v-for="item in testChapter" :key="item.id">
         <scroll-view scroll-y :style="{ height: calHeight + 'rpx' }">
-          <rich-text :nodes="testChapter"></rich-text>
+          <rich-text :nodes="item.text"></rich-text>
         </scroll-view>
       </swiper-item>
     </swiper>
     <!-- 文本部分 结束 -->
 
     <!-- 设置底部 开始 -->
-    <div class="reading__footer cal">
+    <div class="reading__footer animated slideInUp" v-if="setStatus">
       <div class="reading__footer__grid">
         <van-icon
           class-prefix="iconfont"
@@ -73,7 +77,11 @@ export default {
       novalName: test.name, // 小说名称
       chapterCatalog: test.chapterCatalog, // 图书目录
       calHeight: 0, // 计算后的高度
-      testChapter: htmlParser(test.content[0].text),
+      setStatus: false, // 是否显示底部状态栏
+      // testChapter: htmlParser(test.content[0].text),
+      testChapter: test.content,
+      loaderChapters: [], // 已经加载的章节
+      chapterIndex: 0, // 当前章节的标识
     };
   },
   onLoad(option) {
@@ -85,9 +93,12 @@ export default {
       pos: "cal",
       success: (val) => (this.calHeight = val),
     });
-    console.log(this.calHeight);
   },
-  methods: {},
+  methods: {
+    OnClickSetStatus() {
+      this.setStatus = !this.setStatus;
+    },
+  },
 };
 </script>
 

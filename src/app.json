@@ -10,7 +10,8 @@
     "pages/listenKnowledge/main",
     "pages/musicDetail/main",
     "pages/bookDetail/main",
-    "pages/reading/main"
+    "pages/reading/main",
+    "pages/search/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

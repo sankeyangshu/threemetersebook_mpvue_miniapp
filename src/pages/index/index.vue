@@ -3,12 +3,16 @@
  * @Author: 王振
  * @Date: 2021-10-11 16:18:41
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-12 16:42:56
+ * @LastEditTime: 2021-10-15 09:23:44
 -->
 <template>
   <div class="home">
     <!-- 顶部搜索框 开始 -->
-    <van-search :value="keyword" placeholder="搜索你想听的节目" />
+    <van-search
+      :value="keyword"
+      placeholder="搜索你想听的节目"
+      @clickInput="OnClickSearch"
+    />
     <!-- 顶部搜索框 结束 -->
 
     <!-- 轮播图 开始 -->
@@ -142,7 +146,12 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    // 跳转搜索页
+    OnClickSearch() {
+      this.$router.push("/pages/search/main");
+    },
+  },
 };
 </script>
 
