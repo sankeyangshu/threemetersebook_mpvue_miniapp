@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-10-12 10:14:27
  * @LastEditors: 王振
- * @LastEditTime: 2021-10-14 13:45:28
+ * @LastEditTime: 2021-10-15 13:47:57
 -->
 <template>
   <div>
@@ -26,10 +26,7 @@
       <!-- 未登录状态 开始 -->
       <div class="userinfo__content" v-else>
         <div class="userinfo__content__avater" @click="OnClickLogin">
-          <image
-            :src="userInfo.avatarUrl ? userInfo.avatarUrl : logo"
-            mode="scaleToFill"
-          ></image>
+          <image :src="logo" mode="scaleToFill"></image>
         </div>
         <div class="userinfo__content__nickname" @click="OnClickLogin">
           <span>点击登录账户</span>
@@ -56,9 +53,15 @@ export default {
   data() {
     return {
       logo: "https://img.yzcdn.cn/vant/cat.jpeg",
+      isLogin: false,
     };
   },
-  methods: {},
+  methods: {
+    // 点击登录
+    OnClickLogin() {
+      this.$router.push("/pages/login/main");
+    },
+  },
 };
 </script>
 
